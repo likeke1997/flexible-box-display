@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ConfigCell from "@/components/ConfigCell";
+import ConfigCell from "@/components/config-cell";
 export default {
   name: "ConfigCard",
   components: { ConfigCell },

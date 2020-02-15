@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import DisplayCard from "@/components/DisplayCard";
-import ConfigCard from "@/components/ConfigCard";
-import CodeCard from "@/components/CodeCard";
-import FooterArea from "@/components/FooterArea";
+import DisplayCard from "@/components/display-card";
+import ConfigCard from "@/components/config-card";
+import CodeCard from "@/components/code-card";
+import FooterArea from "@/components/footer-area";
 export default {
   name: "App",
   components: { DisplayCard, ConfigCard, CodeCard, FooterArea }

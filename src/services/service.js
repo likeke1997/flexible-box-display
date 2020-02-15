@@ -8,6 +8,6 @@ export default async url => {
     });
     return res.data;
   } catch (err) {
-    return err;
+    throw err;
   }
 };

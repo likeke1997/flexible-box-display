@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import { properties, layout } from "@/const";
+import { commons, properties } from "@/const";
 export default {
   name: "ConfigCell",
   props: {
@@ -70,8 +70,8 @@ export default {
   },
   data() {
     return {
+      layout: commons.layout,
       options: properties.options,
-      layout,
       config: {}
     };
   },

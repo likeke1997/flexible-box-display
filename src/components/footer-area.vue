@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     jumpToAuthorWebsite() {
-      window.open(this.commons.author.website);
+      window.open(this.commons.project.website);
     }
   }
 };

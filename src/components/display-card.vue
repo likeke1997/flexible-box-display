@@ -19,12 +19,13 @@
       </div>
       <div class="author">
         <a-button
+          :loading="like.isLoading"
           icon="like"
           type="dashed"
           ghost
           size="small"
           @click="addLikeCount"
-        >LIKE（{{likeCount}}）</a-button>
+        >LIKE（{{like.count}}）</a-button>
       </div>
     </div>
   </a-card>
@@ -32,13 +33,16 @@
 
 <script>
 import { getLikeCount, addLikeCount } from "@/services";
-import ConfigCell from "@/components/ConfigCell";
+import ConfigCell from "@/components/config-cell";
 export default {
   name: "DisplayCard",
   components: { ConfigCell },
   data() {
     return {
-      likeCount: 0
+      like: {
+        isLoading: true,
+        count: 0
+      }
     };
   },
   computed: {
@@ -51,12 +55,22 @@ export default {
   },
   methods: {
     async getLikeCount() {
-      let res = await getLikeCount();
-      this.likeCount = res.count;
+      try {
+        let res = await getLikeCount();
+        this.like.count = res.count;
+        this.like.isLoading = false;
+      } catch (err) {
+        this.$message.error(err.message);
+      }
     },
     async addLikeCount() {
-      await addLikeCount();
-      this.likeCount += 1;
+      try {
+        await addLikeCount();
+        this.like.count += 1;
+        this.$message.success("非常感谢您的喜欢~");
+      } catch (err) {
+        this.$message.error(err.message);
+      }
     }
   }
 };
