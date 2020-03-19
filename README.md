@@ -10,6 +10,6 @@ npm run build # 构建项目
 
 # 在线演示地址
 
-[点我进入演示地址](http://47.100.139.31/flexible-box-display/)。
+[点我进入演示地址](http://47.100.139.31/flexible_box_display/)。
 
 喜欢的点个赞哦。
