@@ -5,5 +5,5 @@ import options from "./options";
 export default {
   container,
   item,
-  options
+  options,
 };

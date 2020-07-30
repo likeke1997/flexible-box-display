@@ -3,5 +3,5 @@ const number = "number";
 
 export default {
   text,
-  number
+  number,
 };

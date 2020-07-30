@@ -19,60 +19,38 @@
       </div>
       <div class="author">
         <a-button
-          :loading="like.isLoading"
-          icon="like"
+          icon="github"
           type="dashed"
           ghost
           size="small"
-          @click="addLikeCount"
-        >LIKE（{{like.count}}）</a-button>
+          @click="jumpToAuthorWebsite"
+        >likeke1997</a-button>
       </div>
     </div>
   </a-card>
 </template>
 
 <script>
-import { getLikeCount, addLikeCount } from "@/services";
+import { commons } from "@/const";
 import ConfigCell from "@/components/config-cell";
 export default {
   name: "DisplayCard",
   components: { ConfigCell },
   data() {
     return {
-      like: {
-        isLoading: true,
-        count: 0
-      }
+      commons,
     };
   },
   computed: {
     configs() {
       return this.$store.state.configs;
-    }
-  },
-  created() {
-    this.getLikeCount();
+    },
   },
   methods: {
-    async getLikeCount() {
-      try {
-        let res = await getLikeCount();
-        this.like.count = res.count;
-        this.like.isLoading = false;
-      } catch (err) {
-        this.$message.error(err.message);
-      }
+    jumpToAuthorWebsite() {
+      window.open(this.commons.project.website);
     },
-    async addLikeCount() {
-      try {
-        await addLikeCount();
-        this.like.count += 1;
-        this.$message.success("非常感谢您的喜欢~");
-      } catch (err) {
-        this.$message.error(err.message);
-      }
-    }
-  }
+  },
 };
 </script>
 

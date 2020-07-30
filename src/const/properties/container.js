@@ -4,13 +4,13 @@ const Width = {
   label: "width",
   default: "100%",
   info: "容器的宽度",
-  options: options.text
+  options: options.text,
 };
 const Height = {
   label: "height",
   default: "320px",
   info: "容器的高度",
-  options: options.text
+  options: options.text,
 };
 const FlexDirection = {
   label: "flex-direction",
@@ -19,21 +19,21 @@ const FlexDirection = {
   options: [
     {
       value: "row",
-      info: "水平方向，起点在左端"
+      info: "水平方向，起点在左端",
     },
     {
       value: "row-reverse",
-      info: "水平方向，起点在右端"
+      info: "水平方向，起点在右端",
     },
     {
       value: "column",
-      info: "垂直方向，起点在上沿"
+      info: "垂直方向，起点在上沿",
     },
     {
       value: "column-reverse",
-      info: "垂直方向，起点在下沿"
-    }
-  ]
+      info: "垂直方向，起点在下沿",
+    },
+  ],
 };
 const FlexWrap = {
   label: "flex-wrap",
@@ -42,17 +42,17 @@ const FlexWrap = {
   options: [
     {
       value: "nowrap",
-      info: "不换行"
+      info: "不换行",
     },
     {
       value: "wrap",
-      info: "正序换行"
+      info: "正序换行",
     },
     {
       value: "wrap-reverse",
-      info: "倒序换行"
-    }
-  ]
+      info: "倒序换行",
+    },
+  ],
 };
 const JustifyContent = {
   label: "justify-content",
@@ -61,25 +61,25 @@ const JustifyContent = {
   options: [
     {
       value: "flex-start",
-      info: "起点对齐"
+      info: "起点对齐",
     },
     {
       value: "flex-end",
-      info: "终点对齐"
+      info: "终点对齐",
     },
     {
       value: "center",
-      info: "居中对齐"
+      info: "居中对齐",
     },
     {
       value: "space-between",
-      info: "两端对齐，项目之间的间隔相等"
+      info: "两端对齐，项目之间的间隔相等",
     },
     {
       value: "space-around",
-      info: "项目两侧的空隙相等"
-    }
-  ]
+      info: "项目两侧的空隙相等",
+    },
+  ],
 };
 const AlignItems = {
   label: "align-items",
@@ -88,25 +88,25 @@ const AlignItems = {
   options: [
     {
       value: "flex-start",
-      info: "顶端对齐"
+      info: "顶端对齐",
     },
     {
       value: "flex-end",
-      info: "底端对齐"
+      info: "底端对齐",
     },
     {
       value: "center",
-      info: "居中对齐"
+      info: "居中对齐",
     },
     {
       value: "baseline",
-      info: "基线对齐"
+      info: "基线对齐",
     },
     {
       value: "stretch",
-      info: "拉伸至同一长度"
-    }
-  ]
+      info: "拉伸至同一长度",
+    },
+  ],
 };
 const AlignContent = {
   label: "align-content",
@@ -115,29 +115,29 @@ const AlignContent = {
   options: [
     {
       value: "flex-start",
-      info: "起点对齐"
+      info: "起点对齐",
     },
     {
       value: "flex-end",
-      info: "终点对齐"
+      info: "终点对齐",
     },
     {
       value: "center",
-      info: "居中对齐"
+      info: "居中对齐",
     },
     {
       value: "space-between",
-      info: "两端对齐，项目之间的间隔相等"
+      info: "两端对齐，项目之间的间隔相等",
     },
     {
       value: "space-around",
-      info: "项目两侧的空隙相等"
+      info: "项目两侧的空隙相等",
     },
     {
       value: "stretch",
-      info: "拉伸至同一长度"
-    }
-  ]
+      info: "拉伸至同一长度",
+    },
+  ],
 };
 
 export default [
@@ -147,5 +147,5 @@ export default [
   FlexWrap,
   JustifyContent,
   AlignItems,
-  AlignContent
+  AlignContent,
 ];

@@ -15,7 +15,7 @@ import CodeCard from "@/components/code-card";
 import FooterArea from "@/components/footer-area";
 export default {
   name: "App",
-  components: { DisplayCard, ConfigCard, CodeCard, FooterArea }
+  components: { DisplayCard, ConfigCard, CodeCard, FooterArea },
 };
 </script>
 
