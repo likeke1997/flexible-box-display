@@ -1,21 +1,26 @@
 <template>
   <div id="app">
     <a-back-top />
-    <DisplayCard />
-    <ConfigCard />
-    <CodeCard />
-    <FooterArea />
+    <AreaDisplay />
+    <AreaConfig />
+    <AreaCode />
+    <AreaFooter />
   </div>
 </template>
 
 <script>
-import DisplayCard from "@/components/display-card";
-import ConfigCard from "@/components/config-card";
-import CodeCard from "@/components/code-card";
-import FooterArea from "@/components/footer-area";
+import AreaDisplay from "@/components/area-display";
+import AreaConfig from "@/components/area-config";
+import AreaCode from "@/components/area-code";
+import AreaFooter from "@/components/area-footer";
 export default {
   name: "App",
-  components: { DisplayCard, ConfigCard, CodeCard, FooterArea },
+  components: {
+    AreaDisplay,
+    AreaConfig,
+    AreaCode,
+    AreaFooter,
+  },
 };
 </script>
 
@@ -32,6 +37,7 @@ body {
     margin-bottom: 24px;
   }
 }
+
 .ant-card-wider-padding .ant-card-body,
 .ant-card-body {
   padding: 0px !important;

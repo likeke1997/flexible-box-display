@@ -1,5 +1,5 @@
 <template>
-  <a-card title="代码 Code" class="card">
+  <a-card title="代码 | Code" class="card">
     <pre class="code code-html"><code>{{codeHtml}}</code></pre>
     <pre class="code code-css"><code>{{codeCss}}</code></pre>
   </a-card>
@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "CodeCard",
+  name: "AreaCode",
   computed: {
     configs() {
       return this.$store.state.configs;
@@ -22,21 +22,23 @@ export default {
     },
     codeCss() {
       let codes = `.container {\n    display:flex;\n    background-color:tomato;\n`;
-      Object.keys(this.configs.container).map(property => {
+      Object.keys(this.configs.container).forEach((property) => {
         codes += `    ${property}: ${this.configs.container[property]};\n`;
       });
       codes += `}\n`;
       codes += `.item {\n    background-color:royalblue;\n}\n`;
-      this.configs.items.map((item, index) => {
+      this.configs.items.forEach((item, index) => {
         codes += `.item-${index + 1} {\n`;
-        Object.keys(item).map(property => {
-          codes += `    ${property}: ${item[property]};\n`;
+        Object.keys(item).forEach((property) => {
+          if (item[property]) {
+            codes += `    ${property}: ${item[property]};\n`;
+          }
         });
         codes += `}\n`;
       });
       return codes;
-    }
-  }
+    },
+  },
 };
 </script>
 

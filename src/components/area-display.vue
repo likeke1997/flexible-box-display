@@ -1,5 +1,5 @@
 <template>
-  <a-card title="展示 Display" class="card">
+  <a-card title="展示 | Display" class="card">
     <div id="display-container" class="container" :style="configs.container">
       <div
         v-for="(item, index) in configs.items"
@@ -10,7 +10,7 @@
       >
         <a-popover trigger="click" autoAdjustOverflow destroyTooltipOnHide>
           <template slot="content">
-            <ConfigCell isPopover type="item" :index="index" />
+            <CellConfig isPopover type="item" :index="index" />
           </template>
           <div class="item-text">
             <a-button type="dashed" shape="circle" ghost size="small">{{index+1}}</a-button>
@@ -18,27 +18,21 @@
         </a-popover>
       </div>
       <div class="author">
-        <a-button
-          icon="github"
-          type="dashed"
-          ghost
-          size="small"
-          @click="jumpToAuthorWebsite"
-        >likeke1997</a-button>
+        <a-button type="dashed" icon="github" ghost size="small" @click="handleToAppGithub">Star Me</a-button>
       </div>
     </div>
   </a-card>
 </template>
 
 <script>
-import { commons } from "@/const";
-import ConfigCell from "@/components/config-cell";
+import { APP } from "@/const";
+import CellConfig from "@/components/cell-config";
 export default {
-  name: "DisplayCard",
-  components: { ConfigCell },
+  name: "AreaDisplay",
+  components: { CellConfig },
   data() {
     return {
-      commons,
+      APP,
     };
   },
   computed: {
@@ -47,8 +41,8 @@ export default {
     },
   },
   methods: {
-    jumpToAuthorWebsite() {
-      window.open(this.commons.project.website);
+    handleToAppGithub() {
+      window.open(this.APP.github);
     },
   },
 };
