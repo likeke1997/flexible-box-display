@@ -15,24 +15,26 @@ export default {
     codeHtml() {
       let codes = `<div class="container">\n`;
       for (let i = 0; i < this.configs.items.length; i++) {
-        codes += `    <div class="item item-${i + 1}"></div>\n`;
+        codes += `  <div class="item item-${i + 1}"></div>\n`;
       }
       codes += `</div>`;
       return codes;
     },
     codeCss() {
-      let codes = `.container {\n    display:flex;\n    background-color:tomato;\n`;
+      let codes = `.container {\n  display:flex;\n  background-color:tomato;\n`;
       Object.keys(this.configs.container).forEach((property) => {
-        codes += `    ${property}: ${this.configs.container[property]};\n`;
+        const value = this.configs.container[property];
+        if (!value && typeof value !== "number") return;
+        codes += `  ${property}: ${value};\n`;
       });
       codes += `}\n`;
       codes += `.item {\n    background-color:royalblue;\n}\n`;
       this.configs.items.forEach((item, index) => {
         codes += `.item-${index + 1} {\n`;
         Object.keys(item).forEach((property) => {
-          if (item[property]) {
-            codes += `    ${property}: ${item[property]};\n`;
-          }
+          const value = item[property];
+          if (!value && typeof value !== "number") return;
+          codes += `    ${property}: ${value};\n`;
         });
         codes += `}\n`;
       });

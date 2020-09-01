@@ -38,8 +38,8 @@ export default {
   display: flex;
   flex-flow: row wrap;
   .flex-item {
-    width: 240px;
-    flex: 1 1 auto;
+    min-width: 256px;
+    flex: 0 1 16.6%;
   }
 }
 </style>

@@ -60,22 +60,22 @@ export const PROPERTIES = {
     },
     {
       label: "flex-wrap",
-      info: "侧轴的方向，\n进而决定项目的换行方向",
+      info: "侧轴的方向，进而决定项目的换行方向",
       default: "nowrap",
       options: [
         {
           value: "nowrap",
-          info: "侧轴无方向\n相当于不换行",
+          info: "侧轴无方向，相当于不换行",
         },
         {
           value: "wrap",
           info:
-            "主轴方向水平时，侧轴方向从上向下↓\n主轴方向竖直时，侧轴方向从左向右→\n相当于顺序换行",
+            "主轴方向水平时，侧轴方向从上向下↓，主轴方向竖直时，侧轴方向从左向右→，相当于顺序换行",
         },
         {
           value: "wrap-reverse",
           info:
-            "主轴方向水平时，侧轴方向从下向上↑\n主轴方向竖直时，侧轴方向从右向左←\n相当于逆序换行",
+            "主轴方向水平时，侧轴方向从下向上↑，主轴方向竖直时，侧轴方向从右向左←，相当于逆序换行",
         },
       ],
     },
@@ -108,12 +108,12 @@ export const PROPERTIES = {
     },
     {
       label: "align-content",
-      info: "项目沿侧轴方向的对齐方式\n如果项目只有一行，则该属性无效",
+      info: "项目沿侧轴方向的对齐方式，如果项目只有一行，则该属性无效",
       default: "stretch",
       options: [
         {
           value: "stretch",
-          info: "如果项目height未设置或为auto\n项目拉伸至占满侧轴",
+          info: "如果项目height未设置或为auto，项目拉伸至占满侧轴",
         },
         {
           value: "flex-start",
@@ -139,12 +139,12 @@ export const PROPERTIES = {
     },
     {
       label: "align-items",
-      info: "同一行项目沿侧轴方向的对齐方式\n即项目在主轴方向上的垂直对齐方式",
+      info: "同一行项目沿侧轴方向的对齐方式，即项目在主轴方向上的垂直对齐方式",
       default: "stretch",
       options: [
         {
           value: "stretch",
-          info: "如果项目height未设置或为auto\n则拉伸至占满该行",
+          info: "如果项目height未设置或为auto，则拉伸至占满该行",
         },
         {
           value: "flex-start",
@@ -195,7 +195,7 @@ export const PROPERTIES = {
         },
         {
           value: "stretch",
-          info: "如果项目height未设置或为auto\n则拉伸至占满该行",
+          info: "如果项目height未设置或为auto，则拉伸至占满该行",
         },
         {
           value: "flex-start",
@@ -218,7 +218,7 @@ export const PROPERTIES = {
     {
       label: "flex-basis",
       info:
-        "主轴方向水平时，覆盖项目的width属性\n主轴方向垂直时，覆盖项目的height属性",
+        "主轴方向水平时，覆盖项目的width属性，主轴方向垂直时，覆盖项目的height属性",
       default: "auto",
       options: OPTIONS.text,
     },
